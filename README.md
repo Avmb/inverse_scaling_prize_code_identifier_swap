@@ -11,7 +11,7 @@ For this subission we downloaded 559 repositories from the most recent snapshot 
 
 We used the command:
 ```
-python3 ../../pycodesuggest/github-scraper/scraper.py --mode new --outdir=/fs/lofn0/amiceli/inverse_scaling_code_identifier_swap/scrape_with_proper_license/scrape/ --dbfile=/fs/lofn0/amiceli/inverse_scaling_code_identifier_swap/scrape_with_proper_license/cloned_repos.dat --githubuser=amiceli --search="CC-BY-4.0 in:readme size:<=200000"
+python3 /path_to_pycodesuggest/github-scraper/scraper.py --mode new --outdir=/full_path_to_scrape_output_dir/scrape/ --dbfile=//full_path_to_scrape_output_dir/cloned_repos.dat --githubuser=amiceli --search="CC-BY-4.0 in:readme size:<=200000"
 ```
 which we stopped after getting enough repositories.
 We did not use the normalization scripts.
