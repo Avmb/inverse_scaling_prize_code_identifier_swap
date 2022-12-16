@@ -3,6 +3,8 @@
 Code for data generation for the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task python_builtins_swap
 by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.uk.
 
+The colab containing evaluation can be found [here!](https://colab.research.google.com/drive/1fU6eXtXdcZg3lALp5g748NCRuKPq68ko#scrollTo=-mo6uL6ot3Zw) 
+
 ## New version with only repositories with CC-BY 4.0 license
 
 
