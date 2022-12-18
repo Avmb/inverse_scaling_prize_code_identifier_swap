@@ -16,8 +16,8 @@ def usage():
 def output_csv(prompt, bad_class, good_class):
     prompt_str = '"' + prompt.replace('"', '""') + '"'
     #classes_str = '"' + repr([bad_class, good_class]).replace('"', '""').replace("\\n", "\n") + '"'
-    bad_class =  ('""" '+ bad_class+'"""').replace('"', '""')
-    good_class = ('""" '+good_class+'"""').replace('"', '""')
+    bad_class =  ('""" '+ bad_class+'\n"""').replace('"', '""')
+    good_class = ('""" '+good_class+'\n"""').replace('"', '""')
     classes_str = '"['+bad_class+", "+good_class+']"'
     idx_str = "1"
 
