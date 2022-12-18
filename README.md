@@ -1,15 +1,27 @@
 # inverse_scaling_prize_code_identifier_swap
 
 Code for data generation for the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task python_builtins_swap
-by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk .
+by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.uk.
+
+The colab containing evaluation can be found [here!](https://colab.research.google.com/drive/1fU6eXtXdcZg3lALp5g748NCRuKPq68ko#scrollTo=-mo6uL6ot3Zw) 
+
+## New version with only repositories with CC-BY 4.0 license
+
 
 In order to generate the dataset, first install the https://github.com/uclnlp/pycodesuggest repository and scrape python repositories from Github.
-For this subission we downloaded 136 repositories from the most recent snapshot of Github available on 27 Oct 2022. We did not use the normalization scripts.
+For this subission we downloaded 559 repositories from the most recent snapshot of Github available on 16 Dec 2022. 
+
+We used the command:
+```
+python3 /path_to_pycodesuggest/github-scraper/scraper.py --mode new --outdir=/full_path_to_scrape_output_dir/scrape/ --dbfile=//full_path_to_scrape_output_dir/cloned_repos.dat --githubuser=amiceli --search="CC-BY-4.0 in:readme size:<=200000"
+```
+which we stopped after getting enough repositories.
+We did not use the normalization scripts.
 
 After the download is complete, run filter_functions_with_docstrings.py and filter_functions_with_docstrings.py to generate the dataset. We arbitrary cut off the dataset at 1000 examples.
 This code depends on astunparse 1.6.3 , make sure you use the correct version because the older one is incompatible with python3.8 .
 
-Special acknowledgment to Fazl Barez and the Edinburgh EA group who let me know about the Inverse Scaling Prize even though we were not able to complete a team submission.
+Special acknowledgment the Edinburgh EA group.
 
 ## Task description
 
