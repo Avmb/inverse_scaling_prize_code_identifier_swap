@@ -1,11 +1,13 @@
 # The Larger They Are, the Harder They Fail: Language Models do not Recognize Identifier Swaps in Python
 
-Code for data generation and evaluation. Based on a submission to the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task python_builtins_swap
+Code for data generation and evaluation. Based on a submission to the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task `python_builtins_swap`
 by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.uk.
 
 ## Task description
 
-We ask the model to complete a python function given a declaration and docstring, but with a caveat: before the function declaration, we add a statement (e.g. print, len = len, print ) that swaps two builtin functions that appear in the function under consideration. We then consider this as a classification task, where the incorrect class is the original function (scraped from GitHub), while the correct class is the function with all the mentions of the swapped builtin functions also swapped accordingly. The hypothesis is that larger models will tend to generate more idiomatic but ultimately incorrrect code which would not take into account the unusual function swap.
+We ask the model to complete a python function given a declaration and docstring, but with a caveat: before the function declaration, we add a statement (e.g. `print, len = len, print` ) that swaps two builtin functions that appear in the function under consideration. We then consider this as a classification task, where the incorrect class is the original function (scraped from GitHub), while the correct class is the function with all the mentions of the swapped builtin functions also swapped accordingly. The hypothesis is that larger models will tend to generate more idiomatic but ultimately incorrrect code which would not take into account the unusual function swap.
+
+![Drake meme](drake_meme.png?raw=true "Drake meme" = 250x)
 
 ### Why is the task important?
 
@@ -29,7 +31,7 @@ Is inverse scaling on the task novel (not shown in prior work) and/or surprising
 
 ## Code generation
 
-In order to generate the dataset, first clone the pycodesuggest repository in the gen_data directory and scrape python repositories from Github.
+In order to generate the dataset, first clone the pycodesuggest repository in the `gen_data` directory and scrape python repositories from Github.
 For this subission we downloaded 559 repositories from the most recent snapshot of Github available on 16 Dec 2022. 
 
 We used the command:
@@ -41,14 +43,14 @@ We did not use the normalization scripts.
 
 The generated database and file list are available in the gen_data directory
 
-After the download is complete, run filter_functions_with_docstrings_and_shuffle.py and generate_examples.py to generate the dataset. We arbitrary cut off the dataset at 1000 examples. Run generate_examples_no_builtins.py to generate the alternate dataset where non-builtin functions are swapped. Both datasets are available in the cc_4_0_licensed/ directory.
-This code depends on astunparse 1.6.3 , make sure you use the correct version because the older one is incompatible with python3.8 .
+After the download is complete, run `filter_functions_with_docstrings_and_shuffle.py` and `generate_examples.py` to generate the dataset. We arbitrary cut off the dataset at 1000 examples. Run `generate_examples_no_builtins.py` to generate the alternate dataset where non-builtin functions are swapped. Both datasets are available in the `cc_4_0_licensed/` directory.
+This code depends on `astunparse 1.6.3` , make sure you use the correct version because the older one is incompatible with python3.8 .
 
 ## Evaluation
 
-For our main experiments, clone our modified version of the Inverse Scaling Prize repository inverse-scaling-eval-pipeline and follow the instructions. The experiments directory contains a jupyter notebook to generate the plots in the paper.
+For our main experiments, clone our modified version of the Inverse Scaling Prize repository `inverse-scaling-eval-pipeline` and follow the instructions. The `experiments/` directory contains a jupyter notebook to generate the plots in the paper.
 
-For our experiments on the Chat LLMs, use the jupyter notebook in the eval_chat_llms directory.
+For our experiments on the Chat LLMs, use the jupyter notebook in the `eval_chat_llms/` directory.
 
 ## Results
 
@@ -65,5 +67,3 @@ Inverse scaling is also observed when swapping non-builtin top-level functions.
 ![Non-builtin experiment results](experiments/non_builtins_gpt3_loss_plot.png?raw=true "Non-builtin experiment results")
 
 LLMs prefer incorrect programs that use functions in a common way to out-of-distribution but correct programs.
-
-![Drake meme](drake_meme.png?raw=true "Drake meme")
