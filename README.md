@@ -7,7 +7,7 @@ by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.u
 
 We ask the model to complete a python function given a declaration and docstring, but with a caveat: before the function declaration, we add a statement (e.g. `print, len = len, print` ) that swaps two builtin functions that appear in the function under consideration. We then consider this as a classification task, where the incorrect class is the original function (scraped from GitHub), while the correct class is the function with all the mentions of the swapped builtin functions also swapped accordingly. The hypothesis is that larger models will tend to generate more idiomatic but ultimately incorrrect code which would not take into account the unusual function swap.
 
-![Drake meme](drake_meme.png?raw=true "Drake meme" = 250x)
+![Drake meme](drake_meme.png?raw=true "Drake meme" {width=400px height=400px})
 
 ### Why is the task important?
 
