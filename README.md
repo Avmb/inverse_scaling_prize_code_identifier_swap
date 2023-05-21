@@ -1,12 +1,9 @@
-# inverse_scaling_prize_code_identifier_swap
+# The Larger They Are, the Harder They Fail: Language Models do not Recognize Identifier Swaps in Python
 
-Code for data generation for the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task python_builtins_swap
+Code for data generation and evaluation. Based on a submission to the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task python_builtins_swap
 by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.uk.
 
-The colab containing evaluation can be found [here!](https://colab.research.google.com/drive/1fU6eXtXdcZg3lALp5g748NCRuKPq68ko#scrollTo=-mo6uL6ot3Zw) 
-
-## New version with only repositories with CC-BY 4.0 license
-
+## Code generation
 
 In order to generate the dataset, first install the https://github.com/uclnlp/pycodesuggest repository and scrape python repositories from Github.
 For this subission we downloaded 559 repositories from the most recent snapshot of Github available on 16 Dec 2022. 
@@ -18,10 +15,10 @@ python3 /path_to_pycodesuggest/github-scraper/scraper.py --mode new --outdir=/fu
 which we stopped after getting enough repositories.
 We did not use the normalization scripts.
 
+The generated database and file list are available in the gen_data directory
+
 After the download is complete, run filter_functions_with_docstrings.py and filter_functions_with_docstrings.py to generate the dataset. We arbitrary cut off the dataset at 1000 examples.
 This code depends on astunparse 1.6.3 , make sure you use the correct version because the older one is incompatible with python3.8 .
-
-Special acknowledgment the Edinburgh EA group.
 
 ## Task description
 
