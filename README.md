@@ -55,3 +55,14 @@ For our experiments on the Chat LLMs, use the jupyter notebook in the eval_chat_
 All the models tested always prefer the incorrect answer to the correct one, hence classification accuracy is zero. For some model families the preference is more prominent in terms of classification loss for bigger models, resulting in inverse scaling.
 
 ![Main experimental results](experiments/all_models_loss_plot.png?raw=true "Main experimental results")
+
+Similar results are observed on the Chat LLMs in the OpenAI family and Anthropic family.
+
+![Chat LLMs results](eval_chat_llms/chat_llms_classsification_plot.png?raw=true "Chat LLMs results")
+
+Inverse scaling is also observed when swapping non-builtin top-level functions.
+
+![Non-builtin experiment results](experiments/non_builtins_gpt3_loss_plot.png?raw=true "Non-builtin experiment results")
+
+In conclusion, LLMs prefer incorrect programs that use functions in a common way to out-of-distribution but correct programs.
+
