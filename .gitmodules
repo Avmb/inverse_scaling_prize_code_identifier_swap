@@ -1,0 +1,6 @@
+[submodule "inverse-scaling-eval-pipeline"]
+	path = inverse-scaling-eval-pipeline
+	url = git@github.com:Avmb/inverse-scaling-eval-pipeline.git
+[submodule "gen_data/pycodesuggest"]
+	path = gen_data/pycodesuggest
+	url = git@github.com:uclnlp/pycodesuggest.git
