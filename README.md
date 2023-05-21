@@ -66,4 +66,4 @@ Inverse scaling is also observed when swapping non-builtin top-level functions.
 
 LLMs prefer incorrect programs that use functions in a common way to out-of-distribution but correct programs.
 
-![Drake meme](drake_meme_bultins_swap_cropped.pdf?raw=true "Drake meme")
+![Drake meme](drake_meme.png?raw=true "Drake meme")
