@@ -64,5 +64,6 @@ Inverse scaling is also observed when swapping non-builtin top-level functions.
 
 ![Non-builtin experiment results](experiments/non_builtins_gpt3_loss_plot.png?raw=true "Non-builtin experiment results")
 
-In conclusion, LLMs prefer incorrect programs that use functions in a common way to out-of-distribution but correct programs.
+LLMs prefer incorrect programs that use functions in a common way to out-of-distribution but correct programs.
 
+![Drake meme](drake_meme_bultins_swap_cropped.pdf?raw=true "Drake meme")
