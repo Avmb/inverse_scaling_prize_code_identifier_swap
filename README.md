@@ -2,6 +2,7 @@
 
 Code for data generation and evaluation. Based on a submission to the Inverse Scaling Prize https://github.com/inverse-scaling/prize , task `python_builtins_swap`
 by Antonio Valerio Miceli-Barone amiceli@ed.ac.uk and Fazl Barez f.barez@ed.ac.uk.
+Paper: https://arxiv.org/abs/2305.15507
 
 ## Task description
 
@@ -71,3 +72,17 @@ LLMs prefer incorrect programs that use functions in a common way to out-of-dist
 ## Copyright takedown
 
 If you believe that material you own a copyright to has been included into our dataset and you wish it to be removed, please contact the authors by opening an issue on this GitHub repository.
+
+## Cite this work
+
+Please cite this work as:
+```
+@misc{micelibarone2023larger,
+      title={The Larger They Are, the Harder They Fail: Language Models do not Recognize Identifier Swaps in Python}, 
+      author={Antonio Valerio Miceli-Barone and Fazl Barez and Ioannis Konstas and Shay B. Cohen},
+      year={2023},
+      eprint={2305.15507},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
