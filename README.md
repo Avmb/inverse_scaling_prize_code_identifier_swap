@@ -26,14 +26,14 @@ Is inverse scaling on the task novel (not shown in prior work) and/or surprising
 
 ### Dataset generation procedure
 
-1. We scrape python code from github using https://github.com/uclnlp/pycodesuggest 
+1. We scrape python code from GitHub using https://github.com/uclnlp/pycodesuggest 
 2. We extract top-level functions with a docstring 
 3. We take each function that calls at least two different builtin functions, randomly select two of these, and then we create a prompt (everything up to the docstring) and a correct and incorrect pair "classes" (everything after the docstring, with and without the correct substitution)
 
 ## Code generation
 
-In order to generate the dataset, first clone the pycodesuggest repository in the `gen_data` directory and scrape python repositories from Github.
-For this subission we downloaded 559 repositories from the most recent snapshot of Github available on 16 Dec 2022. 
+In order to generate the dataset, first clone the pycodesuggest repository in the `gen_data` directory and scrape python repositories from GitHub.
+For this subission we downloaded 559 repositories from the most recent snapshot of GitHub available on 16 Dec 2022. 
 
 We used the command:
 ```
