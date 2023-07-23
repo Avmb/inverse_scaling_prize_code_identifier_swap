@@ -77,12 +77,18 @@ If you believe that material you own a copyright to has been included into our d
 
 Please cite this work as:
 ```
-@misc{micelibarone2023larger,
-      title={The Larger They Are, the Harder They Fail: Language Models do not Recognize Identifier Swaps in Python}, 
-      author={Antonio Valerio Miceli-Barone and Fazl Barez and Ioannis Konstas and Shay B. Cohen},
-      year={2023},
-      eprint={2305.15507},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{miceli-barone-etal-2023-larger,
+    title = "The Larger they are, the Harder they Fail: Language Models do not Recognize Identifier Swaps in Python",
+    author = "Miceli Barone, Antonio Valerio  and
+      Barez, Fazl  and
+      Cohen, Shay B.  and
+      Konstas, Ioannis",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.19",
+    pages = "272--292",
 }
 ```
